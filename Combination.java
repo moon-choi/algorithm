@@ -1,5 +1,3 @@
-package 수업;
-
 import java.util.Arrays;
 
 public class Combination {
@@ -16,7 +14,7 @@ public class Combination {
   private static void combination(int cnt, int idx) {
     // 2개를 선택했으므로, 결과를 출력하고 재귀를 종료한다.
     if (cnt == 2) {
-      System.out.println(Arrays.toString(result));
+//      System.out.println(Arrays.toString(result));
       return;
     }
     // 대상 집합을 주어진 인덱스부터 순회하며 숫자를 하나 선택한다.
@@ -28,3 +26,4 @@ public class Combination {
     }
   }
 }
+

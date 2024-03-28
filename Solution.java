@@ -10,5 +10,8 @@ public class Solution {
   public static void main(String[] args) {
     Solution moon = new Solution();
     moon.solution(); //그래야 호출하면 정답이 나옴.
+
+    System.out.println(  (int)(Math.random()*10 + 1  ));
+    System.out.println(   (int)(Math.random()*10) + 1   );
   }
 }
