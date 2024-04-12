@@ -6,15 +6,16 @@ public class 콜라츠추측 {
     //홀수인 경우
 
     public static void main(String[] args) {
-        콜라츠추측 sol = new 콜라츠추측();
-        sol.solution(1);
-        sol.solution(6);
-        sol.solution(16);
-        sol.solution(626331);
+
+        solution(1);
+        solution(6);
+        solution(16);
+        solution(626331);
+        solution(1);
     }
 
     //풀이 1.
-    public int solution(long num) {
+    private static int solution(long num) {
 
         int answer = 0;
 
@@ -41,7 +42,7 @@ public class 콜라츠추측 {
 
 
     //풀이 2.
-    public int solution2(long num) {
+    public static int solution2(long num) {
 
         int answer = 0;
 
