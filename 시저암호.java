@@ -1,6 +1,6 @@
 public class 시저암호 {
 
-    private static String solution(String s, int n) {
+    public static String solution(String s, int n) {
         char newC; //변환된 문자
         String newString = ""; //변환된 문자를 저장할 문자열
 

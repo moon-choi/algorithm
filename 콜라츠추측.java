@@ -11,11 +11,10 @@ public class 콜라츠추측 {
         solution(6);
         solution(16);
         solution(626331);
-        solution(1);
     }
 
     //풀이 1.
-    private static int solution(long num) {
+    public static int solution(long num) {
 
         int answer = 0;
 
@@ -25,16 +24,18 @@ public class 콜라츠추측 {
             if (num % 2 == 0) { //짝수일 때
                 num /= 2;
                 answer++; //count가 499번째면 일단 while문 들어오고,
+
                 if (answer >= 500) { //1 올려준 뒤 break.
                     answer = -1;
-                    break;
+//                    break;
+                    System.out.println(answer);
+                    return -1;
                 }
 
             } else { //홀수일 때
                 num = num * 3 + 1;
                 answer++;
             }
-            answer = answer;
         }
         System.out.println(answer);
         return answer;
@@ -60,8 +61,8 @@ public class 콜라츠추측 {
             } else { //홀수일 때
                 num = num * 3 + 1;
             }
+//            answer++;  //여기서 올리면 안됌. 그러면 500이 리턴될 수 있음.
         }
-//        answer++; //여기서 올리면 안됌. 그러면 500이 리턴될 수 있음.
         System.out.println(answer);
         return answer;
     }

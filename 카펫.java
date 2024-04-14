@@ -9,7 +9,7 @@ public class 카펫 {
     }
 
     //풀이 1. 12.97ms ~ 22.06ms
-    private static int[] solution(int brown, int yellow) {
+    public static int[] solution(int brown, int yellow) {
         int[] answer = new int[2];
 
         //x = 갈색의 가로
