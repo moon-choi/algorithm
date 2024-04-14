@@ -13,20 +13,22 @@ public class 올바른괄호 {
         boolean answer = true;
         Stack<Character> stack = new Stack<>();
         char[] stringArr = s.toCharArray();
+        for (char c : stringArr) {
 
-        for(char c : stringArr) {
-            if(c == ')' && stack.isEmpty()) {
-                answer = false;
-            } else if ( c == ')' && !stack.isEmpty()){
-                stack.pop();
-            } else if (c == '(') {
+            if (c == '(') {
                 stack.push(c);
+            } else { //')'일 때
+                if (stack.isEmpty()) {
+                    return false; //Q. 왜 여기를 answer = false; 하면 테스트 2번, 6번 통과를 못할까?
+                } else {
+                    stack.pop();
+                }
             }
 
         }
-        answer = stack.isEmpty();
-        System.out.println(answer);
+
+        answer = stack.isEmpty()? true : false;
+        // answer = stack.isEmpty();
         return answer;
     }
-
 }
