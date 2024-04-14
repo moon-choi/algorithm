@@ -19,7 +19,9 @@ public class 올바른괄호 {
                 stack.push(c);
             } else { //')'일 때
                 if (stack.isEmpty()) {
-                    return false; //Q. 왜 여기를 answer = false; 하면 테스트 2번, 6번 통과를 못할까?
+                    return false;
+                    //Q. 왜 여기를 answer = false; 하면 테스트 2번, 6번 통과를 못할까?
+                    // 반례: "))" 밑의 stack.isEmpty에서 true가 됌.
                 } else {
                     stack.pop();
                 }
