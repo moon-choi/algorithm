@@ -25,6 +25,6 @@ public class 같은숫자는싫어 {
             list.add(queue.poll());
         }
 
-        return list.toArray(list.toArray(new Integer[0]));
+        return list.toArray(new Integer[0]);
     }
 }
