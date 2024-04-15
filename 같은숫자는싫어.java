@@ -7,32 +7,24 @@ public class 같은숫자는싫어 {
 
     public static void main(String[] args) {
         solution(new int[]{1, 1, 3, 3, 0, 1, 1});
-//        solution(new int[]{4, 4, 4, 3, 3});
+        solution(new int[]{4, 4, 4, 3, 3});
     }
-    public static int[] solution(int []arr) {
+    public static Integer[] solution(int []arr) {
         int[] answer = {};
         List<Integer> list = new ArrayList<>();
         Queue<Integer> queue = new LinkedList<>();
-        for(int num : arr) {
-            queue.offer(num);
-        }
+        queue.offer(arr[0]);
 
-        int curr = queue.poll();
-        list.add(curr);
-        while(!queue.isEmpty()) {
-            int next = queue.peek();
-            if(curr == next) {
-                curr = queue.poll();
-            } else {
-                list.add(next);
-                queue.poll();
+        for(int i = 1; i < arr.length; i++) {
+            if(arr[i] != arr[i-1]) {
+                queue.offer(arr[i]);
             }
         }
 
-        for(int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        while(!queue.isEmpty()) {
+            list.add(queue.poll());
         }
 
-        return answer;
+        return list.toArray(list.toArray(new Integer[0]));
     }
 }
