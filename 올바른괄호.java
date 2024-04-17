@@ -26,7 +26,6 @@ public class 올바른괄호 {
                     stack.pop();
                 }
             }
-
         }
 
         answer = stack.isEmpty()? true : false;
