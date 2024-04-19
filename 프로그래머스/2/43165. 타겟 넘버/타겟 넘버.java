@@ -10,10 +10,19 @@ class Solution {
     }
 
     private static void dfs(int sum, int idx, int[] numbers, int target) {
-        if (idx == numbers.length && sum == target) {
-            answer++;
-            return;
+//        if (idx == numbers.length && sum == target) {
+//            answer += 1;
+//            return;
+//        }
+
+        if (idx == numbers.length) {
+            if (sum == target) {
+                answer++;
+                // return;
+            }
+           return;
         }
+
         if (idx >= numbers.length) {
             return;
         }
