@@ -9,24 +9,16 @@ class Solution {
         return answer;
     }
 
-    private static void dfs(int sum, int idx, int[] numbers, int target) {
-//        if (idx == numbers.length && sum == target) {
-//            answer += 1;
-//            return;
-//        }
-
+    private static void dfs(int idx, int sum, int[] numbers, int target) {
         if (idx == numbers.length) {
             if (sum == target) {
                 answer++;
-                // return;
             }
-           return;
-        }
-
-        if (idx >= numbers.length) {
             return;
         }
-        dfs(sum + numbers[idx], idx + 1, numbers, target);
-        dfs(sum - numbers[idx], idx + 1, numbers, target);
+
+        dfs(idx + 1, sum + numbers[idx], numbers, target);
+        dfs(idx + 1, sum - numbers[idx], numbers, target);
+        
     }
-}
+}   
