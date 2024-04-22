@@ -1,7 +1,6 @@
 import java.util.Stack;
 class Solution {
     public static boolean solution(String s) {
-        boolean answer = true;
         Stack<Character> stack = new Stack<>();
         char[] stringArr = s.toCharArray();
         for (char c : stringArr) {
@@ -18,8 +17,6 @@ class Solution {
 
         }
         
-        answer = stack.isEmpty() ? true : false;
-        // answer = stack.isEmpty();
-        return answer;
+        return stack.isEmpty();
     }
 }
