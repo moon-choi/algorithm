@@ -29,17 +29,13 @@ class Solution {
 		
 	}
 	
-	public boolean isTrio(int[] result) { 
-	    int total = 0;
-		    
-	    for (int i = 0; i < three.length; i++) {
-		    total += three[i];    
-		}
-			
-		if(total == 0) {
-		    return true;
-		}
-		
-		return false;
-	}
+    public boolean isTrio(int[] result) {
+        int total = 0;
+
+        for (int num : three) {
+            total += num;
+        }
+
+        return total == 0;
+    }
 }
