@@ -1,8 +1,11 @@
+import java.util.*;
+
 class Solution {
     public static int solution(int n) {
         int answer = 0;
         
-        int[] arr = new int[n+1]; //여기서 
+        int[] arr = new int[100001];
+        //int[] arr = new int[n+1]
         arr[0] = 0;
         arr[1] = 1;
 
